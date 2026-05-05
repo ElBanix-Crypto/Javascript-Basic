@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function greeting() {
+        console.log("hello");
+      }
+
+      greeting();
+      // let greet = greeting()
+      // console.log(greet)
+      function messageUser(name) {
+        console.log("hello" + name);
+      }
+
+      messageUser("HENRY");
+
+      function add(a, b) {
+        result = a + b;
+        console.log(result);
+      }
+      add(12, 50);
+
+      // the return keyword
+      function multiply(c, d) {
+        return c * d;
+      }
+
+      multiply(12, 48);
+
+      let mulResult = multiply(12, 48);
+      console.log(mulResult);
+
+      const greetMe = function () {
+        console.log("hello Function Expression");
+      };
+      greetMe();
+
+      // arrow functions; these are the simpler way to write functions
+      const USers = (name = "barry") => {
+        console.log("arrow Function");
+      };
+      USers("Gary");
+
+      const sub = (a, b) => a + b;
+      console.log(sub(3, 6));
+
+      function myScope() {
+        let message = "i am inside the function";
+        console.log(message);
+      }
+
+      myScope();
+
+      let appName = "Whatsapp";
+
+      function showAppName() {
+        console.log(appName);
+      }
+      showAppName();
+
+      //  multi-Dimensional Function
+
+      // creating an Anonymous Function
+      setTimeout(function () {
+        console.log("this function runs after 2 seconds");
+      }, 2000);
+      //   callback function
+      function processUser(name, callback) {
+        console.log("processing user" + name);
+        callback();
+      }
+
+      function sayDone() {
+        console.log("done");
+      }
+      processUser("Garry", sayDone);
+      
+    </script>
+  </body>
+</html>
