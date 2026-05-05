@@ -7,136 +7,176 @@
   </head>
   <body>
     <script>
-      console.log("Hello People");
+        console.log("Hello People");
 
-      const UserName = "James";
-      console.log(UserName);
+        const UserName = "James";
+        console.log(UserName);
 
-      const CurrentYear = 2026;
-      const YearOfBirth = 1983;
+        const CurrentYear = 2026;
+        const YearOfBirth = 1983;
 
-      const UserAge = YearOfBirth - CurrentYear;
-      console.log(UserAge);
+        const UserAge = YearOfBirth - CurrentYear;
+        console.log(UserAge);
 
-      let name = "james";
-      name = "Endurance";
-      console.log(name);
+        let name = "james";
+        name = "Endurance";
+        console.log(name);
 
-      //  const IsMarried = true;
+        //  const IsMarried = true;
 
-      // Strings
-      const names = "Alex";
-      const message = "Welcome to JavaScript";
+        // Strings
+        const names = "Alex";
+        const message = "Welcome to JavaScript";
 
-      console.log(names, message);
+        console.log(names, message);
 
-      // boolean
-      const isLoggedIn = true;
+        // boolean
+        const isLoggedIn = true;
 
-      if (isLoggedIn) {
-        console.log("show dashboard");
-      } else {
-        console.log("Show login page");
+        if (isLoggedIn) {
+          console.log("show dashboard");
+        } else {
+          console.log("Show login page");
+        }
+
+        // arrays
+
+        const fruits = ["apple", "banana", "mango"];
+
+        console.log(fruits);
+
+        // declaring
+
+        let ages;
+        age = 40;
+
+        console.log(age);
+
+        let age2 = 5,
+          age3 = 10,
+          age4 = 34;
+
+        console.log(age2, age3, age4);
+
+        //  template literals
+        let count = 5;
+        let message_2 = `there are ${count} items in your basket.`;
+        console.log(message_2);
+
+        const manager = "david";
+        console.log(manager);
+
+        // object Oriented Programming in JavaScript
+        let employee = {
+          baseSalary: 30_000,
+          overtime: 10,
+          rate: 20,
+          getWage: function () {
+            return this.baseSalary + this.overtime * this.rate;
+          },
+        };
+
+        console.log(employee);
+
+        let student = {
+          firstName: "John",
+          lastName: "Doe",
+          class: 10,
+        };
+
+        console.log(student);
+        //  using the dot Notation
+        console.log(student.firstName);
+        //  using the Bracket notation
+        console.log(student["class"]);
+
+        // OBJECT OPERATIONS
+        const person = {
+          name: "micah",
+          hobby: "football",
+        };
+
+        // modify object property
+        person.hobby = "food";
+        console.log(person);
+
+        // add properties
+        person.age = 20;
+        person.origin = "italian";
+        console.log(person);
+
+        // delete object properties
+        delete person.name;
+        console.log(person);
+
+        // object  method
+        const worker = {
+          name: "Eugine",
+          age: 30,
+
+          // using functions as a value
+          greet: function () {
+            alert("Hello Eugine");
+          },
+        };
+
+        // call object method
+        worker.greet();
+
+        // nested object
+        const students = {
+          emmanuel: {
+            age: 20,
+            hobby: "sleeping",
+            sex: "male",
+          },
+          class: "Jss III",
+        };
+
+        console.log(students);
+
+        // students.emmanuel.age;
+       console.log( students.emmanuel.age);
+
+      const perSon = {
+            name: 'Ibe',
+            age: 40,
+            greet: function(){
+              console.log('hi world');
+            }
       }
+      // person.greet();
 
-      // arrays
+        // greater than operator
+        console.log(8 >= 5)
+        console.log(5 <= 3)
 
-      const fruits = ["apple", "banana", "mango"];
+        // strict equal operator checks the data and data type while making comparison
+        console.log('5' === 5)
 
-      console.log(fruits);
 
-      // declaring
+        // comparison between Variables
+        const numbers1 = 9;
+        const numbers2 = 5;
 
-      let age;
-      age = 40;
+        const results = numbers1 > numbers2;
 
-      console.log(age);
+        console.log(results);
 
-      let age2 = 5,
-        age3 = 10,
-        age4 = 34;
+        // javascript Logical Operators[AND, OR and NOT]
 
-      console.log(age2, age3, age4);
+        const aged = 18;
+        const height = 4;
 
-      //  template literals
-      let count = 5;
-      let message_2 = `there are ${count} items in your basket.`;
-      console.log(message_2);
+        let resulted = aged >= 18 || height > 4;
 
-      const manager = "david";
-      console.log(manager);
+        console.log(resulted);
 
-      // object Oriented Programming in JavaScript
-      let employee = {
-        baseSalary: 30_000,
-        overtime: 10,
-        rate: 20,
-        getWage: function () {
-          return this.baseSalary + this.overtime * this.rate;
-        },
-      };
+        // the not operator
+        const heights = 5.5;
+        const result = heights < 6;
 
-      console.log(employee);
-
-      let student = {
-        firstName: "John",
-        lastName: "Doe",
-        class: 10,
-      };
-
-      console.log(student);
-      //  using the dot Notation
-      console.log(student.firstName);
-      //  using the Bracket notation
-      console.log(student["class"]);
-
-      // OBJECT OPERATIONS
-      const person = {
-        name: "micah",
-        hobby: "football",
-      };
-
-      // modify object property
-      person.hobby = "food";
-      console.log(person);
-
-      // add properties
-      person.age = 20;
-      person.origin = "italian";
-      console.log(person);
-
-      // delete object properties
-      delete person.name;
-      console.log(person);
-
-      // object  method
-      const worker = {
-        name: "Eugine",
-        age: 30,
-
-        // using functions as a value
-        greet: function () {
-          alert("Hello Eugine");
-        },
-      };
-
-      // call object method
-      worker.greet();
-
-      // nested object
-      const students = {
-        emmanuel: {
-          age: 20,
-          hobby: "sleeping",
-          sex: "male",
-        },
-        class: "Jss III",
-      };
-
-      console.log(students);
-
-      students.emmanuel.age;
-      students["emmanuel"]["age"];
+        console.log(!result);
     </script>
   </body>
 </html>
