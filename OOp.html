@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // objects literals
+        const circles = {
+          radius: 1,
+          location: {
+            x: 1,
+            y: 1,
+          },
+          draw: function () {
+            console.log("draw");
+          },
+        };
+
+        circles.draw();
+
+        // factories & Construction Literals
+        function createCircle(radius) {
+          return {
+            radius,
+            draw: function () {
+              console.log ('draw')
+            },
+          };
+        }
+
+        const circle = createCircle(1);
+        circle.draw();
+
+    //   constructors Literals
+      const Circle = createCircle(1);
+      function Circled(radius){
+          this.radius = radius;
+          this.draw = function(){
+              console.log('draw');
+          }
+      }
+      const another = new Circled(1);
+
+      // reference type Objects
+      let obj = { value: 10 }; 
+      function increase(number) {
+        obj.value++;
+      }
+
+      increase(obj);
+      console.log(obj);
+
+    // stopwatch execise
+    
+    function stopwatch(){
+        let startTime, endTime, running, duration = 0;
+
+        this.start = function(){
+            if(running)
+                throw new Error('stopwatch has already started')
+
+                running = true;
+
+                startTime = new Date();
+        };
+
+        this.stop = function(){
+            if (!running)
+                throw new Error ('stopwatch is not started')
+
+                running = false;
+
+                endtime = new Date();
+
+            const seconds = (endTime.getTime() - startTime.getTime())/1000;
+            duration += seconds;    
+        };
+
+        this.reset = function(){
+            startTime = null;
+            endTime = null;
+            running = false;
+            duration = 0;
+        }; 
+
+        object.defineProperty(this, "duration",{
+            get: function() { return duration;}
+        });
+    }
+    </script>
+  </body>
+</html>
